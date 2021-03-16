@@ -14,6 +14,48 @@
 </head>
 
 <body >
+    <!--  
+    dark es el color, extended es para que en sm y extra samll se conytraiga, fixed top es para que siempre este pegada arriba
+    bg-primary es el color del background 
+         ejemplo usando un background desde bootstrap:
+    <nav class="navbar navbar-dark navbar-expand-sm  fixed-top bg-secondary" >
+    -->
+    <nav class="navbar navbar-dark navbar-expand-sm  fixed-top">
+      
+        <div class="container">
+            
+                <!--toggle button icono-->    
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <a  class="navbar-brand mr-auto"  href="#"> Ristorante Con Fusion </a>
+            
+            <div class="collapse navbar-collapse" id="Navbar">
+                
+                <!--mr is for margin right -->
+                <ul class="navbar-nav mr-auto">
+
+                    <il class="nav-item">
+                        <a class="nav-link active " href="#">Home</a>     
+                    </il>
+                    <il class="nav-item">
+                        <!--active is for highlighting the active page -->
+                        <a class="nav-link  " href="./aboutus.html">About</a>     
+                    </il>
+                    <il class="nav-item">
+                        <a class="nav-link" href="#">Menu</a>     
+                    </il>
+                    <il class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>     
+                    </il>
+
+                </ul>
+            </div>
+            
+        </div>
+
+    </nav>
 
     <header class ="jumbotron">
         <div class ="container">
