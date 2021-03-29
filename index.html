@@ -82,6 +82,7 @@
                 <div class="modal-body">
 
                     <form>
+                        
                         <div class="form-row">
                             <div class="form-group col-sm-4">
                                     <label class="sr-only" for="exampleInputEmail3">Email address</label>
@@ -103,6 +104,10 @@
                             <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
                             <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>        
                         </div>
+
+
+
+                        
                     </form>
 
                 </div>
@@ -130,10 +135,105 @@
                 <div class="form-group row  col-sm align-self-center">
                     <div class="offset-2">
                         <!-- tool tips in a button cuando hovereas, el data html es para decir que si se puede modificar con html -->
+                        <!---
                         <a role="button" href="#cardFormulario"  class="btn btn-warning"
-                        data-toggle="tooltip" data-html="true" title="call us at <br><strong>6141691380</strong>"
-                        data-placement="bottom"
+                        data-toggle="tooltip" data-html="true" title="call us at <br><strong>614169138data-toggle="modal" data-target="#loginModal"
                         >Reserve Table</a>
+                        -->
+                        <a role="button" class="btn btn-warning"
+                        data-toggle="modal" data-html="true" title="call us at <br><strong>614169138 "data-toggle="modal" data-target="#reserveModal">
+                        Reserve Table</a>
+                    </div>
+                    <div id="reserveModal" class="modal fade" role="dialog" style="color: #000;">
+                        <div class="modal-dialog modal-lg" role="content">
+                            <!-- se le agrega un header al modal-->
+                            <div class="modal-content ">
+                                <div class="modal-header" >
+                                    <h4 class="modal-title" style="color: #000;">Reserve a Table</h4>
+                                    <button type="button" class="close" data-dismiss="modal">
+                                        &times;
+                                    </button>
+                
+                                </div>
+                                <div class="modal-body ">
+                
+                                    <form >
+                                        <div class="form-row">
+                                                <dd class=" col-12 col-sm-2">Number of Guests</dd>
+                                                <div class="col-12 col-sm-10 ">
+                                                    <div class="form-check   form-check-inline ">
+                                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                                        <label class="form-check-label" for="flexRadioDefault1">
+                                                        1
+                                                        </label>
+                                                    </div>
+                                                    <div  class="form-check   form-check-inline ">
+                                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" >
+                                                        <label class="form-check-label" for="flexRadioDefault2">
+                                                        2
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check   form-check-inline ">
+                                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+                                                        <label class="form-check-label" for="flexRadioDefault3">
+                                                        3
+                                                        </label>
+                                                    </div>
+                                                    <div  class="form-check   form-check-inline ">
+                                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4" >
+                                                        <label class="form-check-label" for="flexRadioDefault4">
+                                                        4
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check   form-check-inline ">
+                                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault5">
+                                                        <label class="form-check-label" for="flexRadioDefault5">
+                                                        5
+                                                        </label>
+                                                    </div>
+                                                    <div  class="form-check   form-check-inline ">
+                                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault6" >
+                                                        <label class="form-check-label" for="flexRadioDefault6">
+                                                        6
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                        </div>
+                    
+                                            <div class="form-row mb-4" >
+                                                <dd class="col-12 col-sm-2">Section </dd>
+                                                <div class="btn-group btn-group-toggle col-sm-3 ml-0" data-toggle="buttons">
+                                                    <label class="btn btn-success col-7 active ">
+                                                      <input type="radio" name="options" id="option1" autocomplete="off" checked> Non-Smoke
+                                                    </label>
+                                                    <label class="btn btn-danger col-5 ">
+                                                      <input type="radio" name="options" id="option2" autocomplete="off"> Smoke
+                                                    </label>
+                                                   
+                                                </div>
+                                            </div>
+
+                                            <div class="form-row">
+                                                <dd class="col-12 col-sm-2">Date and Time</dd>
+                                                <div class="col-12 col-sm-10 form-group row ">
+                                                    <div >
+                                                        <input type="text" class="form-control ml-3" id="date" name="date" placeholder="Date">
+                                                    </div>
+                                                    <div class="offset-sm-1">
+                                                        <input type="text" class="form-control" id="time" name="time" placeholder="Time">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                           
+                                        
+                                        <div class="form-row">
+                                            <button type="button" class="btn btn-secondary btn-sm  offset-2 " data-dismiss="modal">Cancel</button>
+                                            <button type="submit" class="btn btn-primary btn-sm  ml-1 ">Reserve</button>        
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
