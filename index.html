@@ -54,11 +54,62 @@
                     </il>
 
                 </ul>
+                <!--   para el modal   -->
+                <span class="navbar-text">
+                    <a data-toggle="modal" data-target="#loginModal">
+                        <span class="fa fa-sign-in"></span> Login
+                    </a>
+                </span>
             </div>
             
         </div>
 
     </nav>
+
+    <!-- esto es para incertar el modal, que son las ventanas que te poppean cuando y fade es la clase de animacion-->
+    <!-- role es para indicar el proposito -->
+    <div id="loginModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <!-- se le agrega un header al modal-->
+            <div class="modal-content ">
+                <div class="modal-header" >
+                    <h4 class="modal-title">Login</h4>
+                    <button type="button" class="close" data-dismiss="modal">
+                        &times;
+                    </button>
+
+                </div>
+                <div class="modal-body">
+
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-sm-4">
+                                    <label class="sr-only" for="exampleInputEmail3">Email address</label>
+                                    <input type="email" class="form-control form-control-sm mr-1" id="exampleInputEmail3" placeholder="Enter email">
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <label class="sr-only" for="exampleInputPassword3">Password</label>
+                                <input type="password" class="form-control form-control-sm mr-1" id="exampleInputPassword3" placeholder="Password">
+                            </div>
+                            <div class="col-sm-auto">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox">
+                                    <label class="form-check-label"> Remember me
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>        
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
 
     <header class ="jumbotron col-12 container"  >
         <div class ="container col-12">
@@ -78,7 +129,11 @@
                 
                 <div class="form-group row  col-sm align-self-center">
                     <div class="offset-2">
-                        <a href="#cardFormulario"  class="btn btn-warning">Reserve Table</a>
+                        <!-- tool tips in a button cuando hovereas, el data html es para decir que si se puede modificar con html -->
+                        <a role="button" href="#cardFormulario"  class="btn btn-warning"
+                        data-toggle="tooltip" data-html="true" title="call us at <br><strong>6141691380</strong>"
+                        data-placement="bottom"
+                        >Reserve Table</a>
                     </div>
                 </div>
             </div>
@@ -260,6 +315,13 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!-- script para poder utilizar el tool tip-->
+    <script>
+        $(document).ready(function(){
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
 
 </body>
 
