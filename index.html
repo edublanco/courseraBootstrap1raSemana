@@ -56,9 +56,10 @@
                 </ul>
                 <!--   para el modal   -->
                 <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
+                    <!-- <a data-toggle="modal" data-target="#loginModal">-->
+                    <button id="loginButton" class="btn" style="background-color: transparent; color: whitesmoke;">
                         <span class="fa fa-sign-in"></span> Login
-                    </a>
+                    </button>
                 </span>
             </div>
             
@@ -74,6 +75,7 @@
             <div class="modal-content ">
                 <div class="modal-header" >
                     <h4 class="modal-title">Login</h4>
+                    <!--   <button type="button" class="close" data-dismiss="modal">  -->
                     <button type="button" class="close" data-dismiss="modal">
                         &times;
                     </button>
@@ -139,9 +141,13 @@
                         <a role="button" href="#cardFormulario"  class="btn btn-warning"
                         data-toggle="tooltip" data-html="true" title="call us at <br><strong>614169138data-toggle="modal" data-target="#loginModal"
                         >Reserve Table</a>
-                        -->
+                        
                         <a role="button" class="btn btn-warning"
                         data-toggle="modal" data-html="true" title="call us at <br><strong>614169138 "data-toggle="modal" data-target="#reserveModal">
+                        Reserve Table</a>
+
+                        -->
+                        <a role="button" class="btn btn-warning" title="call us at 614169138 " id="reserveButton">
                         Reserve Table</a>
                     </div>
                     <div id="reserveModal" class="modal fade" role="dialog" style="color: #000;">
@@ -291,15 +297,10 @@
                         <span class="carousel-control-next-icon"></span>
                     </a>
                     <!--pause & play button-->
-                    <div class="btn-group" id="carouselButton">
-                        <button class="btn btn-danger btn-sm" id="carousel-pause">
-                            <span class="fa fa-pause"></span>
-                        </button>
-                        <button class="btn btn-danger btn-sm" id="carousel-play">
-                            <span class="fa fa-play"></span>
-                        </button>
-                    </div>
-
+                    <button class="btn btn-danger btn-sm" id="carouselButton">
+                        <span class="fa fa-pause"></span>
+                    </button>
+               
                 </div>
                 
              </div>
@@ -489,13 +490,31 @@
     <!-- scrpts para pausar y despausar el carusel-->
     <script>
         $(document).ready(function(){
-            $('#mycarousel').carousel({interval:1000});
-            $('#carousel-pause').click(function(){
-                $('#mycarousel').carousel('pause');
+            $('#mycarousel').carousel({interval:100});
+
+            $('#carouselButton').click(function(){
+                if($('#carouselButton').children('span').hasClass('fa-pause')){
+                    $('#mycarousel').carousel('pause');
+                    $('#carouselButton').children('span').removeClass('fa-pause');
+                    $('#carouselButton').children('span').addClass('fa-play');
+
+                }else{
+                    $('#mycarousel').carousel('cycle');
+                    $('#carouselButton').children('span').removeClass('fa-play');
+                    $('#carouselButton').children('span').addClass('fa-pause');
+
+                }
+                    
             });
-            $('#carousel-play').click(function(){
-                $('#mycarousel').carousel('cycle');
-            });
+
+
+            $('#reserveButton').click(function(){
+	        	$('#reserveModal').modal('show');
+	        });
+	        $('#loginButton').click(function(){
+	        	$('#loginModal').modal('show');
+	        });
+
         });
     </script>
 
